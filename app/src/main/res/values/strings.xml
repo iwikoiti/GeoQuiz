@@ -10,5 +10,6 @@
     <string name="false_button">False</string>
     <string name="correct_toast">Correct!</string>
     <string name="incorrect_toast">Incorrect!</string>
-    <string name="next_button">Next</string>
+    <string name="next_button">→</string>
+    <string name="prev_button">←</string>
 </resources>
