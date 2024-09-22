@@ -12,9 +12,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import kotlin.math.abs
 
 private const val TAG = "MainActivity"
+private const val KEY_INDEX = "index"
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +43,11 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate(Bundle?) called")
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        val provider: ViewModelProvider = ViewModelProviders.of(this)
+        val quizViewModel = provider[QuizViewModel::class.java]
+        Log.d(TAG, "Got a QuizViewModel:$quizViewModel")
+
 
         trueButton = findViewById(R.id.true_button)
         falseButton = findViewById(R.id.false_button)
@@ -84,6 +92,7 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         Log.d(TAG,"onPause() called")
     }
+
     override fun onStop() {
         super.onStop()
         Log.d(TAG,"onStop() called")
