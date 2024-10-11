@@ -3,6 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#673AB7"
+        android:visibility="invisible"
+        android:text="@string/reset_button" />
     <TextView
         android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
@@ -10,6 +19,16 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         tools:text="@string/question_australia"/>
+
+    <TextView
+        android:id="@+id/final_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#2A6F2C"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+        android:visibility="invisible" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,6 +41,8 @@
             android:backgroundTint="#009688"
             android:text="@string/true_button"
             />
+
+
         <Button
             android:id="@+id/false_button"
             android:layout_width="wrap_content"
@@ -31,6 +52,17 @@
             android:text="@string/false_button"
             />
     </LinearLayout>
+
+
+    <Button
+        android:id="@+id/cheat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="115dp"
+        android:backgroundTint="#3F51B5"
+        android:text="@string/cheat_button"  />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,4 +87,6 @@
             android:text="@string/next_button"
             />
     </LinearLayout>
+
+
 </FrameLayout>
